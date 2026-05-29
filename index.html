@@ -49,15 +49,12 @@
             width: 132px;  /* Reserves horizontal space for the wider scaled logo */
         }
 
-       .nav-logo img { 
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%); /* Centers it vertically */
-            height: 132px; /* 3x the original visual size */
+        .nav-logo img { 
+            height: 44px; 
             width: auto; 
             display: block; 
-            pointer-events: none; /* Prevents the giant image from blocking clicks */
+            transform: scale(3);
+            transform-origin: left center;
         }
 
         .nav-links { display: flex; gap: 28px; list-style: none; }
