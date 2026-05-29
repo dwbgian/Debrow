@@ -43,7 +43,23 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
             background: rgba(0,0,0,0.55);
         }
-        .nav-logo img { height: 111px; width: auto; display: block; }
+        .nav-logo {
+            position: relative;
+            height: 44px; /* Matches original nav height constraint */
+            width: 132px;  /* Reserves horizontal space for the wider scaled logo */
+        }
+
+       .nav-logo img { 
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%); /* Centers it vertically */
+            height: 132px; /* 3x the original visual size */
+            width: auto; 
+            display: block; 
+            pointer-events: none; /* Prevents the giant image from blocking clicks */
+        }
+
         .nav-links { display: flex; gap: 28px; list-style: none; }
         .nav-links a { color: var(--grey-500); text-decoration: none; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--white); }
